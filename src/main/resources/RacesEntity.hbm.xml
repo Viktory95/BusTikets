@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entities.RacesEntity" table="races" schema="bus_tickets" catalog="postgres">
+        <id name="raceId">
+            <column name="race_id" sql-type="int4" precision="-1" not-null="true"/>
+            <generator class="identity"></generator>
+        </id>
+        <property name="raceName">
+            <column name="race_name" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="busNum">
+            <column name="bus_num" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="emptyPlaces">
+            <column name="empty_places" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="raceDate">
+            <column name="race_date" sql-type="timestamp" precision="-1" not-null="true"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="numeric" precision="-1" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

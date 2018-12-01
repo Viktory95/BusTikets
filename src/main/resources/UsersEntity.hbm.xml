@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entities.UsersEntity" table="users" schema="bus_tickets" catalog="postgres">
+        <id name="userId">
+            <column name="user_id" sql-type="int4" precision="-1" not-null="true"/>
+            <generator class="identity"></generator>
+        </id>
+        <property name="userName">
+            <column name="user_name" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="userPassword">
+            <column name="user_password" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="userLevel">
+            <column name="user_level" sql-type="varchar" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

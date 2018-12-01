@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ComboBox?>
+<GridPane fx:controller="gui.NewTicketController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center"
+          hgap="10" vgap="10">
+    <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+    <columnConstraints>
+        <ColumnConstraints minWidth="200" prefWidth="100"
+                           maxWidth="Infinity" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="300" prefWidth="200"
+                           maxWidth="Infinity" hgrow="ALWAYS">
+        </ColumnConstraints>
+    </columnConstraints>
+
+    <DatePicker fx:id="raceDate" prefHeight="20" prefWidth="200"
+                onAction="#changeDate"
+                GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <ComboBox fx:id="raceNumComboBox" prefHeight="20" prefWidth="200"
+              onAction="#changeRace"
+              GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label text="Имя : " GridPane.columnIndex="0"
+           GridPane.rowIndex="1" >
+    </Label>
+    <TextField fx:id="nameField" prefHeight="20"
+               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Фамилия : " GridPane.columnIndex="0"
+           GridPane.rowIndex="2" >
+    </Label>
+    <TextField fx:id="surnameField" prefHeight="20"
+               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Отчетство : " GridPane.columnIndex="0"
+           GridPane.rowIndex="3" >
+    </Label>
+    <TextField fx:id="surname2Field" prefHeight="20"
+                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label text="Дата рождения : " GridPane.columnIndex="0"
+           GridPane.rowIndex="4" >
+    </Label>
+    <DatePicker fx:id="birthdayDate" prefHeight="20"
+                   GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Label text="Номер свед. о родении : " GridPane.columnIndex="0"
+           GridPane.rowIndex="5" >
+    </Label>
+    <TextField fx:id="birthdayNumField" prefHeight="20"
+                GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+    <Label text="Серия паспорта : " GridPane.columnIndex="0"
+           GridPane.rowIndex="6" >
+    </Label>
+    <TextField fx:id="passSeriaField" prefHeight="20"
+               GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+    <Label text="Номер паспорта : " GridPane.columnIndex="0"
+           GridPane.rowIndex="7" >
+    </Label>
+    <TextField fx:id="passNumField" prefHeight="20"
+               GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+    <Label text="Номер рейса : " GridPane.columnIndex="0"
+           GridPane.rowIndex="8" >
+    </Label>
+    <TextField fx:id="raceNumField" prefHeight="20"
+               GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+    <Label text="Место : " GridPane.columnIndex="0"
+           GridPane.rowIndex="9" >
+    </Label>
+    <ComboBox fx:id="placeComboBox" prefHeight="20" prefWidth="200"
+               GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+
+    <Label text="Цена без ндс : " GridPane.columnIndex="0"
+           GridPane.rowIndex="10" >
+    </Label>
+    <TextField fx:id="priceWithoutNDSField" prefHeight="20"
+               GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+
+    <Label text="Цена с ндс : " GridPane.columnIndex="0"
+           GridPane.rowIndex="11" >
+    </Label>
+    <TextField fx:id="priceWithNDSField" prefHeight="20"
+               GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+
+    <!-- Add Submit Button -->
+    <Button fx:id="submitButton" text="Печать"
+            prefWidth="100" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="12"
+            GridPane.columnSpan="2" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#onPrint">
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+
+    <!-- Add Submit Button -->
+    <Button fx:id="menuButton" text="Меню"
+            prefWidth="100" prefHeight="40" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="13"
+            GridPane.columnSpan="2" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#onMenu">
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+
+</GridPane>
